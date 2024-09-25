@@ -1,0 +1,13 @@
+name: account
+services: 
+  mysql: # nome do serviço
+    container_name: mysql # nome do container
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    networks:
+      - private-network
+
+networks:
+  private-network:
+    driver: bridge
